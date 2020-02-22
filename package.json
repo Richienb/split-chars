@@ -1,6 +1,6 @@
 {
 	"name": "split-chars",
-	"version": "0.0.0",
+	"version": "1.0.0",
 	"description": "Split a string on each full character.",
 	"repository": "https://github.com/Richienb/split-chars.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
