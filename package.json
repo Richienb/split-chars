@@ -1,8 +1,8 @@
 {
-	"name": "the-module",
+	"name": "split-chars",
 	"version": "0.0.0",
-	"description": "My awesome module.",
-	"repository": "https://github.com/Richienb/the-module.git",
+	"description": "Split a string on each full character.",
+	"repository": "https://github.com/Richienb/split-chars.git",
 	"author": "Richie Bendall <richiebendall@gmail.com>",
 	"license": "MIT",
 	"main": "index.js",
@@ -17,8 +17,22 @@
 		"lint": "xo",
 		"test": "yarn lint && ava"
 	},
-	"keywords": [],
-	"dependencies": {},
+	"keywords": [
+		"split",
+		"chars",
+		"characters",
+		"letters",
+		"emoji",
+		"emoticon",
+		"split",
+		"string",
+		"value",
+		"unicode",
+		"ascii"
+	],
+	"dependencies": {
+		"char-regex": "^1.0.2"
+	},
 	"devDependencies": {
 		"ava": "^3.3.0",
 		"eslint-config-richienb": "^0.3.0",

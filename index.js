@@ -1,7 +1,5 @@
 "use strict"
 
-module.exports = (input, { postfix = "rainbows" } = {}) => {
-	if (typeof input !== "string") throw new TypeError(`Expected a string, got ${typeof input}`)
+const charRegex = require("char-regex")()
 
-	return `${input} & ${postfix}`
-}
+module.exports = (input) => typeof input === "string" ? input.match(charRegex) || [] : []

@@ -1,41 +1,33 @@
-# The module [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/the-module/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/the-module)
+# Split Chars [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/split-chars/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/split-chars)
 
-My awesome module.
+Split a string on each full character.
 
-[![NPM Badge](https://nodei.co/npm/the-module.png)](https://npmjs.com/package/the-module)
+[![NPM Badge](https://nodei.co/npm/split-chars.png)](https://npmjs.com/package/split-chars)
 
 ## Install
 
 ```sh
-npm install the-module
+npm install split-chars
 ```
 
 ## Usage
 
 ```js
-const theModule = require("the-module");
+const splitChars = require("split-chars");
 
-theModule("unicorns");
-//=> 'unicorns & rainbows'
+"🏴󠁧󠁢󠁥󠁮󠁧󠁿❤️谢👪".split("");
+//=> [ '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '❤', '️', '谢', '�', '�' ]
+
+splitChars("🏴󠁧󠁢󠁥󠁮󠁧󠁿❤️谢👪")
+//=> [ "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "❤️", "谢", "👪" ]
 ```
 
 ## API
 
-### theModule(input, options?)
+### splitChars(input)
 
 #### input
 
 Type: `string`
 
-Lorem ipsum.
-
-#### options
-
-Type: `object`
-
-##### postfix
-
-Type: `string`\
-Default: `rainbows`
-
-Lorem ipsum.
+The string to split.

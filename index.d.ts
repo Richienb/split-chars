@@ -1,14 +1,14 @@
 /**
- * My awesome module.
- * @param input Lorem ipsum.
- * @param postfix Lorem ipsum.
+ * Split a string on each full character.
+ * @param input The string to split.
  * @example
  * ```
- * const theModule = require("the-module");
- * theModule("unicorns");
- * //=> 'unicorns & rainbows'
+ * const splitChars = require("split-chars");
+ *
+ * splitChars("🏴󠁧󠁢󠁥󠁮󠁧󠁿❤️谢👪")
+ * //=> [ "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "❤️", "谢", "👪" ]
  * ```
 */
-declare function theModule(input: string, { postfix }: { postfix?: string }): string;
+declare function splitChars<T>(input: T): T extends string ? string[] : []
 
-export = theModule;
+export = splitChars
