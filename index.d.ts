@@ -9,6 +9,6 @@
  * //=> [ "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "❤️", "谢", "👪" ]
  * ```
 */
-declare function splitChars<T>(input: T): T extends string ? string[] : []
+declare function splitChars(input: string): string[]
 
 export = splitChars
