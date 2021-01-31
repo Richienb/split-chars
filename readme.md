@@ -1,4 +1,4 @@
-# Split Chars [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/split-chars/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/split-chars)
+# split-chars [![Travis CI Build Status](https://img.shields.io/travis/com/Richienb/split-chars/master.svg?style=for-the-badge)](https://travis-ci.com/Richienb/split-chars)
 
 Split a string on each full character.
 
@@ -13,9 +13,9 @@ npm install split-chars
 ## Usage
 
 ```js
-const splitChars = require("split-chars");
+import splitChars from "split-chars"
 
-"🏴󠁧󠁢󠁥󠁮󠁧󠁿❤️谢👪".split("");
+"🏴󠁧󠁢󠁥󠁮󠁧󠁿❤️谢👪".split("")
 //=> [ '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '�', '❤', '️', '谢', '�', '�' ]
 
 splitChars("🏴󠁧󠁢󠁥󠁮󠁧󠁿❤️谢👪")

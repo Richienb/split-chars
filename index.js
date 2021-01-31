@@ -1,15 +1,11 @@
-"use strict"
+const Segmenter = Intl.Segmenter ?? await (await import("intl-segmenter-polyfill/dist/bundled.js")).createIntlSegmenterPolyfill()
 
-const charRegex = require("char-regex")()
+const segmenter = new Segmenter("en", { granularity: "grapheme" })
 
-module.exports = input => {
+export default input => {
 	if (typeof input !== "string") {
-		throw new TypeError("A string must be provided!")
+		throw new TypeError(`Expected a string, got ${typeof input}`)
 	}
 
-	if (input.length === 0) {
-		return []
-	}
-
-	return [...input.match(charRegex)]
+	return segmenter.segment(input).map(({segment}) => segment)
 }
