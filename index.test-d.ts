@@ -1,4 +1,4 @@
-import {expectType} from "tsd"
-import splitChars from "./index.js"
+import {expectType} from 'tsd';
+import splitChars from './index.js';
 
-expectType<string[]>(splitChars("🏴󠁧󠁢󠁥󠁮󠁧󠁿❤️谢👪"))
+expectType<Iterable<string>>(splitChars('🏴󠁧󠁢󠁥󠁮󠁧󠁿❤️谢👪'));

@@ -5,12 +5,10 @@ Split a string on each full character.
 
 @example
 ```
-import splitChars from "split-chars"
+import splitChars from 'split-chars';
 
-splitChars("🏴󠁧󠁢󠁥󠁮󠁧󠁿❤️谢👪")
-//=> [ "🏴󠁧󠁢󠁥󠁮󠁧󠁿", "❤️", "谢", "👪" ]
+[...splitChars('🏴󠁧󠁢󠁥󠁮󠁧󠁿❤️谢👪')];
+//=> ['🏴󠁧󠁢󠁥󠁮󠁧󠁿', '❤️', '谢', '👪']
 ```
 */
-declare function splitChars(input: string): string[]
-
-export default splitChars
+export default function splitChars(input: string): Iterable<string>;

@@ -1,11 +1,15 @@
-const Segmenter = Intl.Segmenter ?? await (await import("intl-segmenter-polyfill/dist/bundled.js")).createIntlSegmenterPolyfill()
+const segmenter = new Intl.Segmenter();
 
-const segmenter = new Segmenter("en", { granularity: "grapheme" })
-
-export default input => {
-	if (typeof input !== "string") {
-		throw new TypeError(`Expected a string, got ${typeof input}`)
+export default function splitChars(input) {
+	if (typeof input !== 'string') {
+		throw new TypeError(`Expected a string, got ${typeof input}`);
 	}
 
-	return segmenter.segment(input).map(({segment}) => segment)
+	return {
+		* [Symbol.iterator]() {
+			for (const {segment} of segmenter.segment(input)) {
+				yield segment;
+			}
+		},
+	};
 }
